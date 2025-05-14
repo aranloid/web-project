@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url('libo2\ \(1\).jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: blue; /* Set text color to blue */
+  overflow: hidden; /* Prevent scrollbars from appearing due to rain animation */
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for header */
+  color: white; /* Keep header text white for contrast */
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white; /* Keep navigation links white */
+  text-decoration: none;
+}
+
+.hero, .about, .contact {
+  padding: 2rem;
+  text-align: center;
+  color: blue; /* Ensure text in these sections is blue */
+}
+
+.contact {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the contact section */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white; /* Keep footer text white */
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Falling Rain Animation */
+.rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rain-drop {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
